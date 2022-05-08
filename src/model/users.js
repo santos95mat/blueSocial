@@ -32,7 +32,7 @@ export const users = connection.define('users', {
 });
 
 const initTable = async () => {
-    await users.sync()
+    await users.sync();
 }
 
-initTable()
+initTable();

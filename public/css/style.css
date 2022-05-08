@@ -241,6 +241,26 @@ main#home {
     gap: 1rem;
 }
 
+main#home img#next {
+    width: 32px;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    opacity: .7;
+    display: none;
+    z-index: -1;
+}
+
+main#home img#previous {
+    width: 32px;
+    position: absolute;
+    left: 308px;
+    cursor: pointer;
+    opacity: .7;
+    z-index: -1;
+    display: none;
+}
+
 main#home section#dados {
     width: 320px;
     min-width: 320px;
@@ -474,5 +494,26 @@ body#enter {
     article#blue {
         justify-content: center;
         align-items: center;
+    }
+
+    main#home section#dados {
+        left: -100%;
+        position: absolute;
+        overflow: hidden;
+        transition: .5s ease;
+        z-index: 98;
+    }
+
+    main#home section#pub {
+        width: 98%;
+    }
+
+    main#home img#next {
+        display: inline;
+        z-index: 97;
+    }
+
+    main#home img#previous {
+        z-index: 99;
     }
 }

@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-//export const connection = new SEQUELIZE(
+// export const connection = new SEQUELIZE(
 //     process.env.DB_BASE,
 //     process.env.DB_USER,
 //     process.env.DB_PASS,
