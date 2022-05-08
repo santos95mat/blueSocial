@@ -12,6 +12,10 @@
     "dev": "nodemon -e js,html,css,ejs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santos95mat/blueSocial.git"
+  },
   "author": "Matheus",
   "license": "ISC",
   "dependencies": {
