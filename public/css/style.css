@@ -254,7 +254,6 @@ main#home img#next {
     position: absolute;
     left: 0;
     cursor: pointer;
-    opacity: .7;
     display: none;
     z-index: -1;
 }
@@ -262,9 +261,8 @@ main#home img#next {
 main#home img#previous {
     width: 32px;
     position: absolute;
-    left: 308px;
+    left: 310px;
     cursor: pointer;
-    opacity: .7;
     z-index: -1;
     display: none;
 }
