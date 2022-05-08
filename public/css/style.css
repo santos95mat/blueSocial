@@ -18,13 +18,15 @@ a {
 header {
     display: flex;
     justify-content: center;
+    align-items: center;
+    align-content: center;
     width: 100%;
     height: 10vh;
-    background-color: #fff;
+    background-color: #18191A;
 }
 
 header img {
-    height: 10vh;
+    width: 180px;
 }
 
 main {
@@ -38,7 +40,7 @@ footer {
     align-items: center;
     width: 100%;
     height: 5vh;
-    background-color: #fff;
+    background-color: #18191A;
 }
 
 footer a {
@@ -62,16 +64,16 @@ div#getOpaco {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: #000;
+    background-color: #E4E6EB;
     z-index: 2;
-    opacity: .5;
+    opacity: .3;
 }
 
 div#get_cadastro {
     width: 320px;
     height: auto;
     z-index: 3;
-    background-color: #f0f2f5;
+    background-color: #3E4042;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     border-radius: 6px;
     padding: 10px;
@@ -87,6 +89,7 @@ div#titulo {
     margin-bottom: 1rem;
     border-bottom: 1px solid #dadde1;
     padding-bottom: 5px;
+    color: #E4E6EB;
 }
 
 div#titulo div {
@@ -104,17 +107,19 @@ div#get_cadastro form {
 
 div#get_cadastro form input {
     border-radius: 6px;
-    padding: 7px;
+    padding: 10px;
     outline: 0;
-    border: 1px solid #dddfe2;
+    border: 1px solid #E4E6EB;
+    background-color: #3E4042;
+    color: #E4E6EB;
 }
 
 div#get_cadastro form input::placeholder {
-    color: #dddfe2;
+    color: #E4E6EB;
 }
 
 div#get_cadastro form button {
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 9px;
     outline: 0;
     border: none;
@@ -135,6 +140,7 @@ main#login {
     align-content: center;
     min-height: 95vh;
     width: 100%;
+    background-color: #18191A;
 }
 
 main#login section {
@@ -154,57 +160,60 @@ article#blue {
     min-width: 320px;
     text-align: justify;
     padding: 1rem;
+    color: #E4E6EB;
 }
 
-article#dados {
+article#dados_login {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
     padding: 1rem;
     width: 320px;
-    background-color: #f0f2f5;
+    background-color: #3E4042;
     border-radius: 6px;
     text-align: center;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
 
-article#dados form {
+article#dados_login form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    border-bottom: 1px solid #dadde1;
+    border-bottom: 1px solid #E4E6EB;
 }
 
-article#dados form input {
+article#dados_login form input {
     padding: 15px;
     border-radius: 6px;
     outline: 0;
-    border: 1px solid #dddfe2;
+    border: 1px solid #E4E6EB;
+    font-size: 1.2rem;
+    background-color: #3E4042;
+    color: #E4E6EB;
+}
+
+article#dados_login form input::placeholder {
+    color: #E4E6EB;
     font-size: 1.2rem;
 }
 
-article#dados form input::placeholder {
-    color: #dddfe2;
-    font-size: 1.2rem;
-}
-
-article#dados form button {
+article#dados_login form button {
     padding: 15px;
     border-radius: 6px;
     border: none;
     background-color: #166fe5;
-    color: #fff;
+    color: #E4E6EB;
     font-size: 1rem;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
-article#dados form button:hover {
+article#dados_login form button:hover {
     background-color: #365899;
 }
 
-article#dados form a {
+article#dados_login form a {
     margin-bottom: 1rem;
     font-size: 14px;
 }
@@ -218,7 +227,7 @@ button#cadastro {
     border-radius: 6px;
     border: none;
     background-color: #42b72a;
-    color: #fff;
+    color: #E4E6EB;
     font-size: 1rem;
     cursor: pointer;
     transition: 0.3s ease;
@@ -236,8 +245,7 @@ main#home {
     justify-content: center;
     align-content: center;
     align-items: center;
-    background-color: #166fe5;
-    border-radius: 6px;
+    background-color: #18191A;
     gap: 1rem;
 }
 
@@ -265,7 +273,7 @@ main#home section#dados {
     width: 320px;
     min-width: 320px;
     height: 83vh;
-    background-color: #fff;
+    background-color: #3E4042;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -285,7 +293,7 @@ main#home section#dados article#dados_user div#editar_user {
     position: absolute;
     width: 100%;
     height: 280px;
-    background-color: #fff;
+    background-color: #3E4042;
     border-radius: 6px;
     z-index: 1;
     display: flex;
@@ -298,7 +306,7 @@ main#home section#dados article#dados_user div#editar_user {
 
 main#home section#dados article#dados_user div#editar_user div {
     position: absolute;
-    top: 1rem;
+    top: .6rem;
     right: 1rem;
     cursor: pointer;
     font-weight: bolder;
@@ -307,7 +315,7 @@ main#home section#dados article#dados_user div#editar_user div {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 6px;
-    background-color: #dddfe2;
+    background-color: #ff9398;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -315,7 +323,7 @@ main#home section#dados article#dados_user div#editar_user div {
 }
 
 main#home section#dados article#dados_user div#editar_user div:hover {
-    background-color: #ff9398;
+    background-color: #f75159;
 }
 
 main#home section#dados article#dados_user div#editar_user form#form_d {
@@ -327,9 +335,9 @@ main#home section#dados article#dados_user div#editar_user form#form_d {
 }
 
 main#home section#dados article#dados_user div#editar_user form#form_d button {
-    background-color: #dddfe2;
-    cursor: pointer;
+    background-color: #ff9398;
     border: none;
+    cursor: pointer;
     border-radius: 6px;
     width: 26px;
     height: 26px;
@@ -340,7 +348,7 @@ main#home section#dados article#dados_user div#editar_user form#form_d button {
 }
 
 main#home section#dados article#dados_user div#editar_user form#form_d button:hover {
-    background-color: #ff9398;
+    background-color: #f75159;
 }
 
 main#home section#dados article#dados_user div#editar_user form#form_d button img {
@@ -359,6 +367,7 @@ main#home section#dados article#dados_user div#editar_user form {
 main#home section#dados article#dados_user div#editar_user form h3 {
     width: 100%;
     text-align: center;
+    color: #E4E6EB;
 }
 
 main#home section#dados article#dados_user div#editar_user form input {
@@ -366,7 +375,13 @@ main#home section#dados article#dados_user div#editar_user form input {
     border-radius: 6px;
     outline: 0;
     border: none;
-    background-color: #dddfe2;
+    background-color: #3E4042;
+    border: 1px solid #E4E6EB;
+    color: #E4E6EB;
+}
+
+main#home section#dados article#dados_user div#editar_user form input::placeholder {
+    color: #E4E6EB;
 }
 
 main#home section#dados article#dados_user div#editar_user form#form_e button {
@@ -376,7 +391,7 @@ main#home section#dados article#dados_user div#editar_user form#form_e button {
     border: none;
     background-color: #166fe5;
     cursor: pointer;
-    color: #fff;
+    color: #E4E6EB;
 }
 
 main#home section#dados article#dados_user div#editar_user form#form_e button:hover {
@@ -400,10 +415,11 @@ main#home section#dados article#dados_user div#btn_dados button#btn_edit {
     border-radius: 6px;
     width: 26px;
     height: 26px;
+    background-color: #f9ef9a;
 }
 
 main#home section#dados article#dados_user div#btn_dados button#btn_edit:hover {
-    background-color: #f9ef9a;
+    background-color: #fde400;
 }
 
 main#home section#dados article#dados_user div#btn_dados button#btn_logout {
@@ -414,10 +430,11 @@ main#home section#dados article#dados_user div#btn_dados button#btn_logout {
     border-radius: 6px;
     width: 26px;
     height: 26px;
+    background-color: #ff9398;
 }
 
 main#home section#dados article#dados_user div#btn_dados button#btn_logout:hover {
-    background-color: #ff9398;
+    background-color: #f75159;
 }
 
 main#home section#dados article#dados_user div#btn_dados button img {
@@ -435,12 +452,14 @@ main#home section#dados article#dados_user div#img_user {
 main#home section#dados article#dados_user h2#nome_user {
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid #dadde1;
+    border-bottom: 1px solid #E4E6EB;
     text-align: center;
+    color: #E4E6EB;;
 }
 
 main#home section#dados article#dados_user h3#users_t {
     margin-bottom: .5rem;
+    color: #E4E6EB;
 }
 
 main#home section#dados article#dados_users {
@@ -462,14 +481,16 @@ main#home section#dados article#dados_users div.dados_users {
     align-items: center;
     gap: .6rem;
     border-radius: 6px;
-    background-color: #dddfe2;
+    background-color: #3E4042;
+    border: 1px solid #E4E6EB;
+    color: #E4E6EB;
     cursor: pointer;
     font-size: 13px;
 }
 
 main#home section#dados article#dados_users div.dados_users:hover {
     background-color: #166fe5;
-    color: #fff;
+    border-color: #166fe5;
 }
 
 main#home section#dados article#dados_users div.dados_users div {
@@ -485,7 +506,7 @@ main#home section#pub {
     width: 60vw;
     min-width: 320px;
     height: 83vh;
-    background-color: #dadde1;
+    background-color: #3E4042;
     border-radius: 6px;
     overflow: auto;
 }
@@ -520,7 +541,7 @@ body#enter {
         position: absolute;
         transition: .5s ease;
         z-index: 2;
-        box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+        border-right: 1px solid #E4E6EB;
     }
 
     main#home section#pub {
