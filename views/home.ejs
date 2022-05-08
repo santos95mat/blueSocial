@@ -72,6 +72,7 @@
         }
     }
 </script>
+</script>
 <body>
     <%- include('./partials/header.ejs') %>
 
@@ -82,8 +83,9 @@
         <section id="dados">
 
             <article id="dados_user">
+
                 <div id="editar_user">
-                    <div id="btnCE">X</div>
+                    <div id="btnCE" title="Fechar edição">X</div>
                     <form id="form_e" action="/editar" method="post">
                         <h3>Editar dados</h3>
                         <input type="text" name="usuario_e" id="usuario_e" readonly=“true”>
@@ -94,13 +96,13 @@
                     </form>
                     <form id="form_d" action="/delete" method="post">
                         <input type="text" readonly=“true” style="display: none;" id="usuario_d" name="usuario_d">
-                        <button id="btnD" type="submit"><img src="/img/bin.png" alt=""></button>
+                        <button id="btnD" type="submit"><img src="/img/bin.png" alt="" title="Deletar conta"></button>
                     </form>
                 </div>
 
                 <div id="btn_dados">
-                    <button id="btn_edit"><img src="/img/edit.png" alt=""></button>
-                    <button id="btn_logout"><img src="/img/logout.png" alt=""></button>
+                    <button id="btn_edit" title="Editar conta"><img src="/img/edit.png" alt=""></button>
+                    <button id="btn_logout" title="Logout"><img src="/img/logout.png" alt=""></button>
                 </div>
                 <div id="img_user"></div>
                 <h2 id="nome_user"></h2>
