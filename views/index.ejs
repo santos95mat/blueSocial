@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Blue Social</title>
+</head>
+<script src="js/script.js"></script>
+<script>
+    let dados = JSON.parse(localStorage.getItem('user'));
+   
+    if(dados !== null) {
+       window.location.href = "/home";
+    }
+</script>
+<body>
+    <div id="opacidade">
+        <div id="getOpaco"></div>
+        <div id="get_cadastro">
+            <div id="titulo">
+                <h2>Cadastre-se</h2>
+                <div id="sairCadastro">X</div>
+            </div>
+            <form id="form_cadastro" action="/cadastro" method="post">
+                <input required maxlength="50" type="text" id="nome_cad" name="nome_cad" placeholder="nome">
+                <input required maxlength="15" minlength="5" type="text" id="usuario_cad" name="usuario_cad" placeholder="usuario">
+                <input required maxlength="50" type="email" id="email_cad" name="email_cad" placeholder="e-mail">
+                <input required maxlength="15" minlength="5" type="password" id="senha_cad" name="senha_cad" placeholder="senha">
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <main id="login">
+        <section>
+            <article id="blue">
+                <img width="180px" src="https://blueedtech.com.br/wp-content/themes/blue/dist/images/logo-blue-croped.gif">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque necessitatibus vitae consequuntur ad corporis officia culpa corrupti repellat voluptatem voluptates omnis aperiam, a eius sint quae dignissimos neque debitis id.
+                </p>
+            </article>
+            <article id="dados">
+                <form action="/login" method="post">
+                    <input type="text" id="usuario" name="usuario" placeholder="usuario">
+                    <input type="password" id="senha" name="senha" placeholder="senha">
+                    <button type="submit">Entrar</button>
+                    <a href="">Esqueceu sua senha?</a>
+                </form>
+                <button id="cadastro">Criar nova conta</button>
+            </article>
+        </section>
+    </main>
+    
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

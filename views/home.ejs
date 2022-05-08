@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Blue Social</title>
+</head>
+
+<script type="text/javascript">
+    let dados = JSON.parse(localStorage.getItem('user'));
+
+    if(dados === null) {
+        window.location.href = "/";
+    }
+
+    document.onreadystatechange = function() {
+        if(document.readyState === 'complete') {
+            const nome = document.querySelector('#nome_user');
+            const nome_e = document.querySelector('#nome_e');
+            const email_e = document.querySelector('#email_e');
+            const usuario_e = document.querySelector('#usuario_e');
+            const usuario_d = document.querySelector('#usuario_d');
+            nome.innerText = dados.nome;
+            nome_e.value = dados.nome;
+            email_e.value = dados.email;
+            usuario_e.value = dados.usuario;
+            usuario_d.value = dados.usuario;
+
+            const btnE = document.querySelector('#btn_edit');
+            const btnCE = document.querySelector('#btnCE');
+            const btnD = document.querySelector('#btnD');
+            const btnL = document.querySelector('#btn_logout');
+
+            const edit = document.querySelector('#editar_user');
+
+            btnE.addEventListener('click', function(){
+                edit.style.display = "flex";
+            });
+
+            btnCE.addEventListener('click', function(){
+                edit.style.display = "none";
+            });
+
+            btnD.addEventListener('click', function(){
+                localStorage.clear();
+            });
+
+            btnL.addEventListener('click', function(){
+                localStorage.clear();
+                window.location.href = "/";
+            });
+        }
+    }
+</script>
+<body>
+    <%- include('./partials/header.ejs') %>
+
+    <main id="home">
+        <section id="dados">
+
+            <article id="dados_user">
+                <div id="editar_user">
+                    <div id="btnCE">X</div>
+                    <form id="form_e" action="/editar" method="post">
+                        <h3>Editar dados</h3>
+                        <input type="text" name="usuario_e" id="usuario_e" readonly=“true”>
+                        <input minlength="5" maxlength="50" type="text" name="nome_e" id="nome_e">
+                        <input maxlength="50" type="email" name="email_e" id="email_e">
+                        <input required maxlength="15" minlength="5"" type="password" name="senha_e" id="senha_e" placeholder="nova senha">
+                        <button type="submit">Editar</button>
+                    </form>
+                    <form id="form_d" action="/delete" method="post">
+                        <input type="text" readonly=“true” style="display: none;" id="usuario_d" name="usuario_d">
+                        <button id="btnD" type="submit"><img src="/img/bin.png" alt=""></button>
+                    </form>
+                </div>
+
+                <div id="btn_dados">
+                    <button id="btn_edit"><img src="/img/edit.png" alt=""></button>
+                    <button id="btn_logout"><img src="/img/logout.png" alt=""></button>
+                </div>
+                <div id="img_user"></div>
+                <h2 id="nome_user"></h2>
+                <h3 id="users_t">Usuários</h3>
+
+            </article>
+
+            <article id="dados_users">
+                <% usuarios.forEach((usuario) => { %>
+                    <div class="dados_users">
+                        <div></div>
+                        <h4><%= usuario.nome %></h4>
+                    </div>
+                <% }); %>
+            </article>
+
+        </section>
+        <section id="pub">
+            
+        </section>       
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
