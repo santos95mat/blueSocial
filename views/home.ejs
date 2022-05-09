@@ -102,17 +102,18 @@
                     </div>
                     <div id="img_user"></div>
                     <h2 id="nome_user"></h2>
-                    <h3 id="users_t">Usuários</h3>
 
                 </article>
-
+                <h3 id="users_t">Usuários</h3>
                 <article id="dados_users">
-                    <% usuarios.forEach((usuario) => { %>
-                        <div class="dados_users">
-                            <div></div>
-                            <h4><%= usuario.nome %></h4>
-                        </div>
-                    <% }); %>
+                    <div id="container_users">
+                        <% usuarios.forEach((usuario) => { %>
+                            <div class="dados_users">
+                                <div></div>
+                                <h4><%= usuario.nome %></h4>
+                            </div>
+                        <% }); %>
+                    </div>
                 </article>
                 
             </div>
