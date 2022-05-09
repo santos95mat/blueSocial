@@ -263,7 +263,6 @@ main#home img#menuM {
 main#home section#dados {
     width: 288px;
     height: 83vh;
-    min-height: 320px;
     background-color: #3E4042;
     border-radius: 6px;
     display: flex;
