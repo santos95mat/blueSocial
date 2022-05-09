@@ -8,6 +8,7 @@ body {
     width: 100vw;
     max-width: 100%;
     height: auto;
+    min-width: 320px;
 }
 
 a {
@@ -249,27 +250,17 @@ main#home {
     gap: 1rem;
 }
 
-main#home img#next {
+main#home img#menuM {
     width: 32px;
     position: absolute;
-    left: 0;
+    left: 100%;
     cursor: pointer;
-    display: none;
-    z-index: -1;
-}
-
-main#home img#previous {
-    width: 32px;
-    position: absolute;
-    left: 310px;
-    cursor: pointer;
-    z-index: -1;
+    z-index: 2;
     display: none;
 }
 
 main#home section#dados {
-    width: 320px;
-    min-width: 320px;
+    width: 288px;
     height: 83vh;
     background-color: #3E4042;
     border-radius: 6px;
@@ -535,23 +526,31 @@ body#enter {
     }
 
     main#home section#dados {
-        left: -100%;
+        left: -288px;
         position: absolute;
         transition: .5s ease;
         z-index: 2;
-        border-right: 1px solid #E4E6EB;
+        background-color: #18191A;
+        border-radius: 0;
+    }
+
+    main#home section#dados article#dados_users div.dados_users {
+        border: none;
     }
 
     main#home section#pub {
         width: 98%;
     }
 
-    main#home img#next {
-        display: inline;
-        z-index: 1;
+    main#home section#dados article#dados_user div#editar_user {
+        background-color: #18191A;
     }
 
-    main#home img#previous {
-        z-index: 3;
+    main#home section#dados article#dados_user div#editar_user form input {
+        border: none;
+    }
+
+    main#home img#menuM {
+        display: block;
     }
 }

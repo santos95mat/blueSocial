@@ -34,8 +34,7 @@
             const btnCE = document.querySelector('#btnCE');
             const btnD = document.querySelector('#btnD');
             const btnL = document.querySelector('#btn_logout');
-            const btnN = document.querySelector('#next');
-            const btnP = document.querySelector('#previous');
+            const btnM = document.querySelector('#menuM');
 
             const edit = document.querySelector('#editar_user');
 
@@ -56,18 +55,14 @@
                 window.location.href = "/";
             });
 
-            btnN.addEventListener('click', function(){
-                dadosS.style.left = "0";
-                btnN.style.display = "none";
-                setTimeout(function(){
-                    btnP.style.display = "inline";
-                },500) 
-            });
-
-            btnP.addEventListener('click', function(){
-                dadosS.style.left = "-100%";
-                btnN.style.display = "inline";
-                btnP.style.display = "none";
+            btnM.addEventListener('click', function(){
+                if(btnM.src.includes('next')) {
+                    dadosS.style.left = "0";
+                    btnM.src = "/img/previous.png";
+                } else {
+                    dadosS.style.left = "-288px";
+                    btnM.src = "/img/next.png";
+                }
             });
         }
     }
@@ -77,12 +72,11 @@
     <%- include('./partials/header.ejs') %>
 
     <main id="home">
-        <img id="next" src="/img/next.png" alt="">
-        <img id="previous" src="/img/previous.png" alt="">
         
         <section id="dados">
 
             <article id="dados_user">
+                <img id="menuM" src="/img/next.png" alt="">
 
                 <div id="editar_user">
                     <div id="btnCE" title="Fechar edição">X</div>
