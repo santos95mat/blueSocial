@@ -27,7 +27,7 @@ header {
 }
 
 header img {
-    width: 180px;
+    height: 10vh;
 }
 
 main {
@@ -42,6 +42,7 @@ footer {
     width: 100%;
     height: 5vh;
     background-color: #18191A;
+    min-height: 1.5rem;
 }
 
 footer a {
@@ -268,6 +269,12 @@ main#home section#dados {
     flex-direction: column;
 }
 
+main#home section#dados div#dados_container {
+    width: 288px;
+    height: 83vh;
+    overflow-y: auto;
+}
+
 main#home section#dados article#dados_user {
     position: relative;
     width: 100%;
@@ -281,19 +288,18 @@ main#home section#dados article#dados_user {
 main#home section#dados article#dados_user div#editar_user {
     position: absolute;
     width: 100%;
-    height: 280px;
+    min-height: 83vh;
     background-color: #3E4042;
     border-radius: 6px;
-    z-index: 1;
-    display: flex;
+    z-index: 5;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     align-content: center;
     display: none;
 }
 
-main#home section#dados article#dados_user div#editar_user div {
+main#home section#dados article#dados_user div#editar_user div#btnCE {
     position: absolute;
     top: .6rem;
     right: 1rem;
@@ -311,7 +317,7 @@ main#home section#dados article#dados_user div#editar_user div {
     align-items: center;
 }
 
-main#home section#dados article#dados_user div#editar_user div:hover {
+main#home section#dados article#dados_user div#editar_user div#btnCE:hover {
     background-color: #f75159;
 }
 
@@ -334,6 +340,7 @@ main#home section#dados article#dados_user div#editar_user form#form_d button {
     justify-content: center;
     align-content: center;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 main#home section#dados article#dados_user div#editar_user form#form_d button:hover {
@@ -348,6 +355,9 @@ main#home section#dados article#dados_user div#editar_user form {
     width: 90%;
     height: auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     flex-direction: column;
     gap: .6rem;
     position: relative;
@@ -362,6 +372,7 @@ main#home section#dados article#dados_user div#editar_user form h3 {
 main#home section#dados article#dados_user div#editar_user form input {
     padding: 6px;
     border-radius: 6px;
+    width: 260px;
     outline: 0;
     border: none;
     background-color: #3E4042;
@@ -376,6 +387,7 @@ main#home section#dados article#dados_user div#editar_user form input::placehold
 main#home section#dados article#dados_user div#editar_user form#form_e button {
     padding: 6px;
     border-radius: 6px;
+    width: 272px;
     outline: 0;
     border: none;
     background-color: #166fe5;
@@ -440,7 +452,7 @@ main#home section#dados article#dados_user div#img_user {
 
 main#home section#dados article#dados_user h2#nome_user {
     width: 100%;
-    height: 50px;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #E4E6EB;
     text-align: center;
     color: #E4E6EB;;
@@ -488,6 +500,10 @@ main#home section#dados article#dados_users div.dados_users div {
     border-radius: 11px;
     background-color: #000;
     margin-left: .8rem;
+}
+
+main#home section#dados article#dados_users div.dados_users h4 {
+    width: 220px;
 }
 
 

@@ -74,44 +74,48 @@
     <main id="home">
         
         <section id="dados">
+            <img id="menuM" src="/img/next.png" alt="">
+            <div id="dados_container">
 
-            <article id="dados_user">
-                <img id="menuM" src="/img/next.png" alt="">
+                <article id="dados_user">
 
-                <div id="editar_user">
-                    <div id="btnCE" title="Fechar edição">X</div>
-                    <form id="form_e" action="/editar" method="post">
-                        <h3>Editar dados</h3>
-                        <input type="text" name="usuario_e" id="usuario_e" readonly=“true”>
-                        <input minlength="5" maxlength="50" type="text" name="nome_e" id="nome_e">
-                        <input maxlength="50" type="email" name="email_e" id="email_e">
-                        <input required maxlength="15" minlength="5"" type="password" name="senha_e" id="senha_e" placeholder="nova senha">
-                        <button type="submit">Editar</button>
-                    </form>
-                    <form id="form_d" action="/delete" method="post">
-                        <input type="text" readonly=“true” style="display: none;" id="usuario_d" name="usuario_d">
-                        <button id="btnD" type="submit"><img src="/img/bin.png" alt="" title="Deletar conta"></button>
-                    </form>
-                </div>
-
-                <div id="btn_dados">
-                    <button id="btn_edit" title="Editar conta"><img src="/img/edit.png" alt=""></button>
-                    <button id="btn_logout" title="Logout"><img src="/img/logout.png" alt=""></button>
-                </div>
-                <div id="img_user"></div>
-                <h2 id="nome_user"></h2>
-                <h3 id="users_t">Usuários</h3>
-
-            </article>
-
-            <article id="dados_users">
-                <% usuarios.forEach((usuario) => { %>
-                    <div class="dados_users">
-                        <div></div>
-                        <h4><%= usuario.nome %></h4>
+                    <div id="editar_user">
+                        <div id="btnCE" title="Fechar edição">X</div>
+                        <form id="form_e" action="/editar" method="post">
+                            <div id="img_user"></div>
+                            <h3>Editar dados</h3>
+                            <input type="text" name="usuario_e" id="usuario_e" readonly=“true”>
+                            <input minlength="5" maxlength="50" type="text" name="nome_e" id="nome_e">
+                            <input maxlength="50" type="email" name="email_e" id="email_e">
+                            <input required maxlength="15" minlength="5"" type="password" name="senha_e" id="senha_e" placeholder="nova senha">
+                            <button type="submit">Editar</button>
+                        </form>
+                        <form id="form_d" action="/delete" method="post">
+                            <input type="text" readonly=“true” style="display: none;" id="usuario_d" name="usuario_d">
+                            <button id="btnD" type="submit"><img src="/img/bin.png" alt="" title="Deletar conta"></button>
+                        </form>
                     </div>
-                <% }); %>
-            </article>
+
+                    <div id="btn_dados">
+                        <button id="btn_edit" title="Editar conta"><img src="/img/edit.png" alt=""></button>
+                        <button id="btn_logout" title="Logout"><img src="/img/logout.png" alt=""></button>
+                    </div>
+                    <div id="img_user"></div>
+                    <h2 id="nome_user"></h2>
+                    <h3 id="users_t">Usuários</h3>
+
+                </article>
+
+                <article id="dados_users">
+                    <% usuarios.forEach((usuario) => { %>
+                        <div class="dados_users">
+                            <div></div>
+                            <h4><%= usuario.nome %></h4>
+                        </div>
+                    <% }); %>
+                </article>
+                
+            </div>
 
         </section>
         <section id="pub">
