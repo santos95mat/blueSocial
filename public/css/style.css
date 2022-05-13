@@ -377,12 +377,14 @@ section#home_publi article h2 {
 section#home_publi article textarea {
     margin-top: 2px;
     margin-bottom: 8px;
+    padding: 1%;
     outline: none;
     resize: none;
-    width: 98%;
-    height: 80px;
+    width: 96%;
+    height: 50px;
     border-radius: 6px;
     background-color: #E4E6EB;
+    font-size: 14px;
 }
 
 /* Fim da home */
