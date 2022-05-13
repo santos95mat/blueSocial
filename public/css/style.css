@@ -352,11 +352,12 @@ section#home_publi {
     min-height: 400px;
     overflow: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 section#home_publi article {
-    width: 90%;
-    height: 160px;
+    width: 98%;
+    min-height: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -368,17 +369,18 @@ section#home_publi article {
 }
 section#home_publi article h2 {
     color: #E4E6EB;
-    width: 95%;
+    width: 98%;
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 8px;
 }
 section#home_publi article textarea {
-    padding: 6px;
+    margin-top: 2px;
+    margin-bottom: 8px;
     outline: none;
     resize: none;
-    width: 95%;
-    height: 100px;
+    width: 98%;
+    height: 80px;
     border-radius: 6px;
     background-color: #E4E6EB;
 }
