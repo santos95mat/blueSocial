@@ -1,8 +1,8 @@
 document.onreadystatechange = function() {
     if(document.readyState === 'complete') {
 
-        const btnCC = document.querySelector('#cadastro');
-        const btnSC = document.querySelector('#sairCadastro');
+        const btnCC = document.querySelector('#btn_cadastro');
+        const btnSC = document.querySelector('#btn_sairCadastro');
         const cad = document.querySelector('#opacidade');
 
         btnCC.addEventListener('click', function() {
