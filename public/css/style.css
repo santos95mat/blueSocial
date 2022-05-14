@@ -354,6 +354,8 @@ section#home_publi {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
+    align-content: center;
 }
 section#home_publi article {
     width: 98%;

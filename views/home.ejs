@@ -26,12 +26,11 @@
             const usuarios = document.querySelector('#usuarios');
             const menu = document.querySelector('#menu_Hmobile');
             const h2user = document.querySelector('.homeH2User');
-            const h2nome = document.querySelector('.homeH2Nome');
+            const h2nome = document.querySelectorAll('.homeH2Nome');
             const h2publi = document.querySelector('.publiH2Nome');
             const btnLogout = document.querySelectorAll('.btn_logout')
 
             h2user.innerText = dados.usuario;
-            h2nome.innerText = dados.nome;
             h2publi.innerText = "Ola " + dados.nome + ", Conte-nos algo...";
             btnU.style.background = "#166fe5";
 
@@ -57,11 +56,15 @@
                     mobile = 0;
                 }                
             });
+            
             for(let btnL of btnLogout) {
                 btnL.addEventListener('click', function(){
                 localStorage.clear();
                 window.location.href = "/";
             });
+            }
+            for(let nome of h2nome) {
+                nome.innerText = dados.nome;
             }
         }
     }    
